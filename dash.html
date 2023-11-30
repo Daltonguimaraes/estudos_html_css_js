@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dash.css"/>
+    <link href="https://fonts.cdnfonts.com/css/source-sans-pro" rel="stylesheet">
+    <style>@import url('https://fonts.cdnfonts.com/css/source-sans-pro');</style>
+    
+
+    <title>Classificação</title>
+</head>
+<body>
+  <div class="degrade">
+    <h1 style="position: relative;">Classificação do Contribuinte 
+      <i class="fab fa-500px me-3 fa-2x" style="position: absolute; top: 0; right: 0;"></i>
+    </h1>
+  </div>
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 col-sm-6">
+        <svg width="100%" height=" auto">
+          <rect x="100" y="80" rx="20" ry="20" width="60%" height="60%" style="fill:rgb(255, 217, 0); stroke:black; stroke-width:2; opacity:0.5" />
+          <text x="58%" y="63%" font-size="150" text-anchor="middle" fill="black" transform="translate(-50%, -50%)">B</text>
+        </svg>                
+      </div>
+      
+      <div class="col-md-8 col-sm-6">
+        <div id="myChart" style="max-width: 100%; height: 400px;"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container text-center">
+    <div class="row align-items-center">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Listagem de Empresas</th>
+            <th scope="col">Classificação</th>
+            <th scope="col">Detalhes</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <th scope="row">1</th>
+            <td>Casa das Nova....</td>
+            <td>C</td>
+            <td>
+              <button type="button" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-search" viewBox="0 0 15 15">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                </svg>
+              </button>
+            </td>
+            
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Rações....</td>
+            <td>A</td>
+            <td>
+              <button type="button" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-search" viewBox="0 0 15 15">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Agricultora....</td>
+            <td>E</td>
+            <td>
+              <button type="button" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-search" viewBox="0 0 15 15">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                </svg>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <p>Footer</p>
+  </div>
+  
+  <script>
+    alert("Em desenvolvimento!")
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"> </script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+      google.charts.load('current',{packages:['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      
+      // Your Function
+      function drawChart() {
+      // Set Data
+      const data = google.visualization.arrayToDataTable([
+      ['Price', 'Size'],
+      [50,7],[60,8],[70,8],[80,9],[90,9],[100,9],
+      [110,10],[120,11],[130,14],[140,14],[150,15]
+      ]);
+      // Set Options
+      const options = {
+      title: 'House Prices vs Size',
+      hAxis: {title: 'Square Meters'},
+      vAxis: {title: 'Price in Millions'},
+      legend: 'none'
+      };
+      // Draw Chart
+      const chart = new google.visualization.LineChart(document.getElementById('myChart'));
+      chart.draw(data, options);
+      }
+  </script> 
+</body>
+</html>
